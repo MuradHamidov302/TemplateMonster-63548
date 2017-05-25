@@ -16,6 +16,7 @@ function question(param){
 
 	}
 	param.nextElementSibling.style.display="block";
+	param.nextElementSibling.style.color="#46d0fe";
 	param.setAttribute("data-attr",'-')
 
 }

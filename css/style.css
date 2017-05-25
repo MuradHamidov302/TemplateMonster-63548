@@ -119,6 +119,10 @@ html,body{
 	margin:0 auto;
 	text-align: left;
 }
+#questions>.wrapper>div{
+
+	border-bottom:1px solid #ececee;
+}
 #questions h1{
 	color:#46d0fe;
 	position:relative;
@@ -140,7 +144,7 @@ font-family: 'FontAwesome';
 	display: none;
 	transition: all .4s ease;
 	padding-bottom:30px;
-	border-bottom:1px solid lightgray;
+	
 }
 
 
