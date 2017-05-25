@@ -128,8 +128,8 @@ html,body{
 	
 }
 #questions h1:after{
- content: "\f067";
- font-family: 'FontAwesome';
+font-family: 'FontAwesome';
+ content: attr(data-attr);
  position:absolute;
  right:0;
 
