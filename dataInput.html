@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		button{
+			padding:10px 20px;
+			background:none;
+			border:1px solid gray;
+			box-shadow:0px 0px 5px gray;
+		}
+		input,textarea{
+			padding:10px 20px;
+			border:1px solid gray;
+			box-shadow:0px 0px 5px gray;
+			display: block;
+			margin:10px 0px;
+
+		}
+		textarea{
+			position:absolute;
+			top:0px;
+			left:300px;
+			width:400px;
+			height:150px;
+		}
+		input:focus{
+			box-shadow:0px 0px 10px gray;
+			background:lightgray;
+		}
+	</style>
+</head>
+<body>
+
+<script>
+	var addLang=document.createElement("button");
+	var sendData=document.createElement("button");
+	addLang.setAttribute("onclick","addLanguage()");
+	sendData.setAttribute("onclick","sendInfo()");
+	addLang.innerHTML="Add New Language";
+	sendData.innerHTML="Send Data";
+	var text=document.createElement("textarea");
+	text.setAttribute("placeholder","Sizin datalariniz burda gorunecek insallah")
+	
+	document.body.appendChild(addLang);
+	document.body.appendChild(sendData);
+	document.body.appendChild(text);
+
+	count=0;
+	function addLanguage(){
+		count++;
+		var input=document.createElement("input");
+		input.setAttribute("type","text")
+		input.setAttribute("placeholder",count+" ci texti elave edin")
+		document.body.appendChild(input)
+	}
+
+	function sendInfo(){
+		var myInputs=document.querySelectorAll("input");
+		for(i=0;i<myInputs.length;i++){
+			text.innerHTML+=myInputs[i].value+" - ";
+		}
+	}
+
+</script>
+</body>
+</html>
